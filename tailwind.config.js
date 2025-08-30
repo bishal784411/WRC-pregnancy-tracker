@@ -14,7 +14,11 @@ export default {
       fontSize: {
         '4xl5': '4.55rem',
         subHeading: '1.375rem',
+<<<<<<< HEAD
         foterText: '1.0625rem', 
+=======
+        foterText: '1.0625rem',
+>>>>>>> origin/setting
         textallover: '1.25rem',
       },
       keyframes: {

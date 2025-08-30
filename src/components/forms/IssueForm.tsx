@@ -10,9 +10,10 @@ import { ISSUE_CATEGORIES, SEVERITY_LEVELS } from '../../utils/constants';
 
 interface IssueFormProps {
   onSuccess: () => void;
+  onBack: () => void; 
 }
 
-export function IssueForm({ onSuccess }: IssueFormProps) {
+export function IssueForm({ onSuccess, onBack }: IssueFormProps) {
   const { user } = useAuth();
   const { addIssue } = useIssues();
   const [loading, setLoading] = useState(false);
@@ -120,9 +121,6 @@ export function IssueForm({ onSuccess }: IssueFormProps) {
             className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             placeholder="Please provide details about the issue. Avoid including personally identifiable information."
           />
-          <p className="text-xs text-gray-500">
-            Do not include names, identification numbers, or other personally identifiable information
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -199,7 +197,7 @@ export function IssueForm({ onSuccess }: IssueFormProps) {
             </Button>
           </div>
           <div className='w-[200px]'>
-            <Button type="button" variant="secondary">
+            <Button type="button" variant="secondary" onClick={onBack}>
               Cancel
             </Button>
           </div>

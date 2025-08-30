@@ -1,6 +1,6 @@
 
 import { useState, useRef, useEffect } from 'react';
-import { User, Bell, ChevronDown, Shield, Lock } from 'lucide-react';
+import { User, Bell, ChevronDown, Shield, Lock, Settings } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 import { ROLE_LABELS } from '../../utils/constants';
 import { SidebarExpandIcon, SidebarCollapseIcon } from '../svgIcons/CustomIcons';
@@ -34,6 +34,7 @@ export function Header({ onSettingsChange, sidebarCollapsed, onToggleSidebar }: 
     { id: 'settings-security', label: 'Security', icon: Lock },
     { id: 'settings-notifications', label: 'Notifications', icon: Bell },
     { id: 'settings-privacy', label: 'Privacy', icon: Shield },
+    {id: 'settings', label: 'Settings', icon: Settings }
   ];
 
   const handleSettingsClick = (settingId: string) => {

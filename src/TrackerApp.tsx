@@ -12,6 +12,7 @@ import { ProfileSettings } from './pages/Settings/ProfileSettings';
 import { SecuritySettings } from './pages/Settings/SecuritySettings';
 import { NotificationSettings } from './pages/Settings/NotificationSettings';
 import { PrivacySettings } from './pages/Settings/PrivacySettings';
+import { Settings } from './pages/Settings/Setting';
 
 function TrackerAppContent() {
   const { user, loading } = useAuth();
@@ -95,6 +96,8 @@ function TrackerAppContent() {
         return <NotificationSettings onBack={() => setActiveSection('dashboard')} />;
       case 'settings-privacy':
         return <PrivacySettings onBack={() => setActiveSection('dashboard')} />;
+      case 'settings':
+        return <Settings/>;
       default:
         return (
           <ReporterDashboard 

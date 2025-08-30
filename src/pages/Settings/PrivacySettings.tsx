@@ -1,35 +1,15 @@
-import React from 'react';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
-import { Breadcrumbs } from '../../components/navigation/Breadcrumbs';
-import { ArrowLeft, Shield } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 interface PrivacySettingsProps {
   onBack: () => void;
 }
 
-export function PrivacySettings({ onBack }: PrivacySettingsProps) {
-  const breadcrumbs = [
-    { label: 'Dashboard', href: '#' },
-    { label: 'Settings', href: '#' },
-    { label: 'Privacy', current: true }
-  ];
+export function PrivacySettings({ }: PrivacySettingsProps) {
 
   return (
     <div className="space-y-6">
-      <div>
-        <Breadcrumbs items={breadcrumbs} />
-        <div className="mt-4 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900">Privacy Settings</h1>
-            <p className="text-gray-600">Manage your privacy and data preferences</p>
-          </div>
-          <Button variant="outline" onClick={onBack}>
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            Back to Dashboard
-          </Button>
-        </div>
-      </div>
 
       <Card>
         <div className="p-6">

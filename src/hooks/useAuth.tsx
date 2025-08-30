@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { User, AuthContextType, SignupData, UserRole } from '../types';
+import { User, AuthContextType, SignupData } from '../types';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -67,7 +67,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setToast(null);
   };
 
-  const login = async (email: string, password: string, code?: string) => {
+  const login = async (email: string, code?: string) => {
     setLoading(true);
     
     try {

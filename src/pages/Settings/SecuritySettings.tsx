@@ -2,14 +2,10 @@ import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { Edit } from 'lucide-react';
 import InlineReloadIndicator from '../../components/ui/InlineReloadIndicator';
 
 
-=======
-import { Edit, Save } from 'lucide-react';
->>>>>>> origin/setting
 interface SecuritySettingsProps {
   onBack: () => void;
 }
@@ -24,7 +20,7 @@ export function SecuritySettings({ }: SecuritySettingsProps) {
     const newEditingState = !isEditing;
 
     if (isEditing) {
-    }
+    } 
 
     setIsEditing(newEditingState);
 
@@ -32,24 +28,17 @@ export function SecuritySettings({ }: SecuritySettingsProps) {
     }, 100);
   };
 
-<<<<<<< HEAD
   
 
   
 
-=======
->>>>>>> origin/setting
   return (
     <div className="space-y-6">
 
       <Card>
         <div className="p-6">
           <div className="flex items-center space-x-3 mb-6">
-<<<<<<< HEAD
             <h2 className="text-xl font-semibold text-gray-900">Privacy & Security</h2>
-=======
-            <h2 className="text-xl font-semibold text-gray-900">Security</h2>
->>>>>>> origin/setting
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -85,17 +74,10 @@ export function SecuritySettings({ }: SecuritySettingsProps) {
             {isEditing ? (
               <div className='w-[200px]'>
                 <Button type="button" className="w-[200px]">
-<<<<<<< HEAD
                   Update Password
                 </Button>
               </div>
 
-=======
-                Update Password
-              </Button>
-              </div>
-              
->>>>>>> origin/setting
             ) : (
               <Button
                 type="button"
@@ -104,7 +86,6 @@ export function SecuritySettings({ }: SecuritySettingsProps) {
                 onClick={handleEditToggle}
               >
                 <Edit className="h-5 w-5 mr-2" />
-<<<<<<< HEAD
                 Change Password
               </Button>
             )}
@@ -128,15 +109,6 @@ export function SecuritySettings({ }: SecuritySettingsProps) {
                 </div>
               </div>
             </div>
-=======
-                Edit Profile
-              </Button>
-            )}
-
-            <Button variant="danger" className="w-[200px]">
-              Delete My Account
-            </Button>
->>>>>>> origin/setting
           </div>
 
         </div>

@@ -5,6 +5,8 @@ import { IssuesTable } from '../../components/tables/IssuesTable';
 import { FilterPanel } from '../../components/filters/FilterPanel';
 import { Breadcrumbs } from '../../components/navigation/Breadcrumbs';
 import { FileText, AlertTriangle, Clock, CheckCircle, Users } from 'lucide-react';
+import InlineReloadIndicator from '../../components/ui/InlineReloadIndicator';
+
 
 interface FilterState {
   category: string;
@@ -54,11 +56,8 @@ export function AdminReports({ onViewReport, onEditReport }: AdminReportsProps) 
   ];
 
   if (loading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-      </div>
-    );
+    return <InlineReloadIndicator />;
+
   }
 
   return (
